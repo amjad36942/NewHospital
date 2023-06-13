@@ -1,0 +1,55 @@
+﻿@model MiniHospitalProject.Models.DoctorDaysModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DoctorDaysModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DoctorDay)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DoctorDay)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TimeSlot)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TimeSlot)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DoctorDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DoctorDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Isavailable)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Isavailable)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DoctorFirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DoctorFirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DoctorLastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DoctorLastName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ScheduleId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

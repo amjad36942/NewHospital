@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MiniHospitalProject.Models.PatientModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Patient</h1>
+
+<p>
+    <a asp-action="Create">Add New Patient</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientHistory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientAddress)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientHistory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientAddress)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

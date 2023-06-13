@@ -1,0 +1,51 @@
+﻿@model MiniHospitalProject.Models.PatientModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Patient</h1>
+
+<h4>PatientModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PatientFirstName" class="control-label"></label>
+                <input asp-for="PatientFirstName" class="form-control" />
+                <span asp-validation-for="PatientFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatientLastName" class="control-label"></label>
+                <input asp-for="PatientLastName" class="form-control" />
+                <span asp-validation-for="PatientLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatientHistory" class="control-label"></label>
+                <input asp-for="PatientHistory" class="form-control" />
+                <span asp-validation-for="PatientHistory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact" class="control-label"></label>
+                <input asp-for="Contact" class="form-control" />
+                <span asp-validation-for="Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatientAddress" class="control-label"></label>
+                <input asp-for="PatientAddress" class="form-control" />
+                <span asp-validation-for="PatientAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="SignUp" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

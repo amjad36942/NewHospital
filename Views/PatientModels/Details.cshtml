@@ -1,0 +1,49 @@
+﻿@model MiniHospitalProject.Models.PatientModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PatientModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientFirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PatientFirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientLastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PatientLastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientHistory)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PatientHistory)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientAddress)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PatientAddress)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

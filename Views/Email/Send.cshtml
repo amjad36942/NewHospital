@@ -1,0 +1,41 @@
+﻿@model MiniHospitalProject.Models.MailContent
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<h1>EMAIL SENDING TO USER</h1>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Send" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ToEmailAddress" class="control-label"></label>
+                <input asp-for="ToEmailAddress" class="form-control" />
+                <span asp-validation-for="ToEmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubjectEmail" class="control-label"></label>
+                <input asp-for="SubjectEmail" class="form-control" />
+                <span asp-validation-for="SubjectEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bodyEmail" class="control-label"></label>
+                <input asp-for="bodyEmail" class="form-control" />
+                <span asp-validation-for="bodyEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="attachement" class="control-label"></label>
+                <input asp-for="attachement" class="form-control" type="file" multiple />
+                <span asp-validation-for="attachement" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Send" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

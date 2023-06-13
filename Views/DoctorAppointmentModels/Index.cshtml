@@ -1,0 +1,66 @@
+﻿@model IEnumerable<MiniHospitalProject.Models.DoctorAppointmentModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>DoctorAppointments</h1>
+
+<p>
+    <a asp-action="Create">Create Doctor Appoitment</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AppointmentDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppointmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalFee)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalFee)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AppId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AppId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AppId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
