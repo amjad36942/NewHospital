@@ -19,6 +19,8 @@ namespace MiniHospitalProject.Models
 
         public int DepartmentId { get; set; }
 
+        public string abc { get; set; }
+
         public DepartmentModel Department { get; set; }
     }
 }
