@@ -18,7 +18,7 @@ namespace MiniHospitalProject.Models
         public string Fees { get; set;}
 
         public int DepartmentId { get; set; }
-
+//this is not correct
         public string abc { get; set; }
 
         public DepartmentModel Department { get; set; }
